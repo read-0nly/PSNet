@@ -1,6 +1,5 @@
 ﻿$Format = [pscustomobject]@{ `
-    "Fore" = @{ 
-        "Black" = [char]27+"[30m" ; `
+    "Fore" = @{ "Black" = [char]27+"[30m" ; `
         "Red" = [char]27+"[31m" ; `
         "Green" = [char]27+"[32m" ; `
         "Yellow" = [char]27+"[33m" ; `
@@ -19,8 +18,7 @@
         "Cyan+" = [char]27+"[96m" ; `
         "White+" = [char]27+"[97m" ;     
     }; 
-    "Back" = @{ `
-        "Black" = [char]27+"[40m" ;
+    "Back" = @{ "Black" = [char]27+"[40m" ;
         "Red" = [char]27+"[41m" ;
         "Green" = [char]27+"[42m" ;
         "Yellow" = [char]27+"[43m" ;
@@ -40,8 +38,7 @@
         "White+" = [char]27+"[107m" ;    
     
     }
-    "Style" = @{ `
-        "Bold" = [char]27+"[1m";
+    "Style" = @{ "Bold" = [char]27+"[1m";
         "NoBold" = [char]27+"[22m";
         "Underline" = [char]27+"[4m";
         "NoUnderline"=[char]27+"[24m";
