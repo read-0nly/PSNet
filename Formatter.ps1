@@ -1,4 +1,5 @@
-﻿$trashFormat=@{}
+﻿
+$trashFormat=@{}
 $trashFore=@{}
 $trashFore["Black"]=[char]27+"[30m" ; 
 $trashFore["Red"]=[char]27+"[31m" ; 
