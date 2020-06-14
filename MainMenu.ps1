@@ -1,4 +1,5 @@
-﻿##Trying to fix a weird behavior - looks like some weird character is added to the begining of the page when it's loaded. It should only mess with this comment.
+#
+#Trying to fix a weird behavior - looks like some weird character is added to the begining of the page when it's loaded. It should only mess with this comment.
 #Good news is good practice should fix it.
 $global:menu = [pscustomobject]@{
     "MenuState" = 1
