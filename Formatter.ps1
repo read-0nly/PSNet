@@ -47,7 +47,7 @@ $trashStyle["Positive"] = [char]27+"[27m";
 
 $trashFormat["Fore"]=$trashFore
 $trashFormat["Back"]=$trashBack
-$trashFormat["Style"]$trashStyle
+$trashFormat["Style"]=$trashStyle
 $trashFormat["ResetAll"] = [char]27+"[0m";
 $Format=[pscustomobject]$trashFormat
 
