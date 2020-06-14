@@ -31,6 +31,7 @@
         }
     )
 }
+iex ((iwr https://raw.githubusercontent.com/read-0nly/PSNet/master/Formatter.ps1 -usebasicparsing).content)
 
 $currentMenu = [ref]$global:Menu
 
@@ -65,6 +66,7 @@ function paintMenu($curMenu){
 
 function paintScreen(){
     cls
+    write-host ""
     paintMenu $currentMenu.Value
 
 }
