@@ -1,4 +1,6 @@
-﻿$global:menu = [pscustomobject]@{
+﻿##Trying to fix a weird behavior - looks like some weird character is added to the begining of the page when it's loaded. It should only mess with this comment.
+#Good news is good practice should fix it.
+$global:menu = [pscustomobject]@{
     "MenuState" = 1
     "Settings" = @{
         "Vertical" = $true;
@@ -12,27 +14,26 @@
     "Cursor" = 1;
     "Items" = @(
         [pscustomobject]@{
-            "Name" = "Entry1";
-            "Command" = [scriptBlock]{echo "Entry 1"};
+            "Name" = "Asteroid game";
+            "Command" = [scriptBlock]{iex (iwr https://raw.githubusercontent.com/read-0nly/PSRepo/master/Fun/MeteorGame.ps1).content};
             "Selected" = 0
             "Selectable" = 0
         },    
         [pscustomobject]@{
-            "Name" = "Entry2";
-            "Command" = [scriptBlock]{echo "Entry 2"};
+            "Name" = "EVTX Ripper";
+            "Command" = [scriptBlock]{iex (iwr https://raw.githubusercontent.com/read-0nly/PSRepo/master/Utility/EVTXRipper.ps1).content};
             "Selected" = 0
             "Selectable" = 0
         },    
         [pscustomobject]@{
-            "Name" = "Entry3";
-            "Command" = [scriptBlock]{echo "Entry 3"};
+            "Name" = "HashDuplicateSearch";
+            "Command" = [scriptBlock]{iex (iwr https://raw.githubusercontent.com/read-0nly/PSRepo/master/Utility/HashDuplicateSearch.ps1).content};
             "Selected" = 0
             "Selectable" = 1
         }
     )
 }
-$test = (iwr https://raw.githubusercontent.com/read-0nly/PSNet/master/Formatter.ps1?x=1232).content
-$test = [scriptblock]::Create($test)
+iex (iwr https://raw.githubusercontent.com/read-0nly/PSNet/master/Formatter.ps1).content.substring(1)
 
 $currentMenu = [ref]$global:Menu
 
@@ -67,7 +68,17 @@ function paintMenu($curMenu){
 
 function paintScreen(){
     cls
-    write-host ""
+    write-host "#################################################################"
+    write-host "#                                                               #"
+    write-host ("#                 "+$Format.Fore["Red"]+"PSNet"+$Format.ResetAll+" : "+$Format.Fore["Red+"]+"A Really Bad Idea"+$Format.ResetAll+"                     #")
+    write-host "#                                                               #"
+    write-host ("#          "+$Format.Fore["Green+"]+"Brought to you by read-0nly.github.io"+$Format.ResetAll+"                #")
+    write-host "#                                                               #"
+    write-host "#################################################################"
+    write-host
+    write-host
+    write-host
+
     paintMenu $currentMenu.Value
 
 }
