@@ -1,4 +1,5 @@
-﻿##Trying to fix a weird behavior - looks like some weird character is added to the begining of the page when it's loaded. It should only mess with this comment.
+#ignore
+#Trying to fix a weird behavior - looks like some weird character is added to the begining of the page when its loaded. It should only mess with this comment.
 # iex (iwr https://bit.ly/2Cat1pH).content
 #Good news is good practice should fix it.
 $global:menu = [pscustomobject]@{
