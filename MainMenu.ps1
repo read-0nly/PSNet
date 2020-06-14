@@ -31,7 +31,8 @@
         }
     )
 }
-iex ((iwr https://raw.githubusercontent.com/read-0nly/PSNet/master/Formatter.ps1 -usebasicparsing).content)
+$test = (iwr https://raw.githubusercontent.com/read-0nly/PSNet/master/Formatter.ps1?x=1232).content
+$test = [scriptblock]::Create($test)
 
 $currentMenu = [ref]$global:Menu
 
