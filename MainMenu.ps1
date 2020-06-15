@@ -22,8 +22,8 @@ $global:menu = [pscustomobject]@{
             "Selectable" = 0
         },    
         [pscustomobject]@{
-            "Name" = "EVTX Ripper";
-            "Command" = [scriptBlock]{iex (iwr https://raw.githubusercontent.com/read-0nly/PSRepo/master/Utility/EVTXRipper.ps1).content};
+            "Name" = "InterTransmission";
+            "Command" = [scriptBlock]{iex (iwr https://raw.githubusercontent.com/read-0nly/PSRepo/master/Utility/InterTransmission.ps1).content};
             "Selected" = 0
             "Selectable" = 0
         },    
